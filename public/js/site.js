@@ -19,6 +19,11 @@ $(function() {
     }
   };
   
+  $('a[data-navigate]').live('click', function navigateToByAttribute(e) {
+    e.preventDefault();
+    site_navigate_to($(this).attr('data-navigate'));
+  })
+  
   /* change site navigation style in menu anchors */
   $('.navbar a').live('click', function(e) { if(pieces = ($(this).attr('href')).split("/#/")) { site_navigate_to(pieces[1]); } });
   
@@ -65,7 +70,7 @@ $(function() {
       }, function() {
       $(this).find('.navigation a').animate({ marginLeft:0, opacity:0 }, 300);
     });
-    $('.job-slides li a').cycle({ fx:'fade', speed:'fast', timeout:0, next:'.nav-right', prev:'.nav-left' });
+    $('.job-slides li a').cycle({ fx:'fade', speed:'fast', timeout:0, next:'.nav-right', prev:'.nav-left',  });
   }
   
   var __a = {
