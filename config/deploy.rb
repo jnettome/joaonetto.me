@@ -5,15 +5,15 @@ set :application, "joaonetto.me"
 set :repository,  "git@bitbucket.org:joaonettome/joaonetto.me.git"
 set :scm, :git
 set :scm_passphrase, "Phdxp103!@#"
+set :scm_verbose, true
 set :deploy_via, :remote_cache
 set :deploy_to, "/var/www/joaonetto.me"
 set :use_sudo, true
 
 set :user, "joaonettome"
-set :domain, "joaonetto.me"
+set :domain, "mytrix"
 
-role :web, "apache"                          # Your HTTP server, Apache/etc
-role :app, "apache"                          # This may be the same as your `Web` server
+role :web, "apache2"                          # Your HTTP server, Apache/etc
 server domain, :app, :web
 
 namespace :deploy do
