@@ -1,0 +1,39 @@
+@import url('bootstrap.min.css');
+@import url('bootstrap-responsive.min.css');
+
+body {
+	font:200 16px/180% 'Open Sans',sans-serif;
+}
+
+.content {
+	margin-top:5%;
+	padding-bottom:80px;
+}
+
+.content h1 {
+	color:#D94052;
+	margin-bottom:40px;
+	text-shadow:1px 1px 1px rgba(255, 255, 0, .1);
+}
+
+.content a {
+	color:#D94052;
+}
+
+.content p {
+	-moz-text-shadow:1px 1px 1px rgba(255, 255, 0, .1);
+	text-shadow:1px 1px 1px rgba(255, 255, 0, .1);
+	margin-top:20px;
+}
+
+.heart {
+	color:#D94052;
+}
+
+.recent_projects dt {
+	color:#D94052;
+}
+
+.recent_projects dl {
+	margin:5px 0;
+}
