@@ -9,6 +9,6 @@ get '/' do
   erb :index
 end
 
-get '/beta' do
-  erb :beta
-end
+# get '/beta' do
+#   erb :beta
+# end
