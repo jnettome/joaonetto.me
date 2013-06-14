@@ -5,7 +5,7 @@
   <meta name="description" content="passionate web and mobile developer. ruby, rails, backbone, js, php, ios, android. available for freelance work." />
   <meta name="keywords" content="developer, programador, desenvolvedor, web, mobile, ruby, rails, wordpress, freela, freelance, brazil, curitiba, joao, netto, joaonettome, jnettome" />
   <meta name="viewport" content="width=700,maximum-scale=1.0,user-scalable=yes" />
-  <title>João Netto - passionate web/mobi developer</title>
+  <title>João Netto | web and mobile developer</title>
 
   <link rel="stylesheet" href="/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/bootstrap-responsive.min.css" />
@@ -13,14 +13,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-  <!--<script type="text/javascript" src="//a.vimeocdn.com/js/froogaloop2.min.js"></script>-->
-  <!--<script type="text/javascript" src="//use.typekit.net/qnc2ltw.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
-  <!--<script type="text/javascript" src="/js/jnettome.js"></script>-->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 
-  <script type="text/javascript" src="//www.google.com/jsapi"></script>
-  <script type="text/javascript" src="/js/banner2.js"></script>
   <script src="//vjs.zencdn.net/4.0/video.js"></script>
   <script src="/js/bigvideo.js"></script>
 </head>
@@ -29,21 +23,19 @@
     <div class="container">
       <div class="row">
         <section class="span12 main" id="wrapper">
-          <!-- <h1>João Netto</h1>
-          <p class="lead">passionate web & mobi developer</p> -->
-          <canvas id="canvas-banner" class="inactive"></canvas>
+          <div class="typo">
+            <h1>a fucking great developer</h1>
+          </div>
         </section>
       </div>
 
       <div class="row contact">
-        <section class="span4">
-          <a href="//github.com/jnettome">github</a>
-        </section>
-        <section class="span4">
-          <a href="//linkedin.com/in/joaonettome">linked in</a>
-        </section>
-        <section class="span4">
-          <a href="mailto:hi@joaonetto.me?subject=hello%20Joao!">get in touch</a>
+        <section class="span12">
+          <p>
+            see my code on <a href="//github.com/jnettome">github</a>, my
+            professional bio on <a href="//linkedin.com/in/joaonettome">linked in</a>
+            or <a href="mailto:hi@joaonetto.me?subject=hello%20Joao!">drop a letter</a>.
+          </p>
         </section>
       </div>
     </div>
@@ -63,12 +55,16 @@
     })();
 
     $(document).ready(function() {
-      var banner = new Banner();
-      banner.initialize('canvas-banner');
+      // var banner = new Banner();
+      // banner.initialize('canvas-banner');
 
       var BV = new $.BigVideo();
       BV.init();
-      BV.show('/img/video.mp4',{ambient:true});
+      BV.show('/img/video.mp4', {ambient:false, controls:false});
+
+      $("body").click(function(e) {
+        BV.getPlayer().volume(BV.getPlayer().volume() == 0);
+      })
     });
   </script>
 </body>
